@@ -6,6 +6,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/mkdocs/useguide/</loc>
+     <lastmod>2018-06-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/chrome/tricks/</loc>
      <lastmod>2018-06-12</lastmod>
      <changefreq>daily</changefreq>
