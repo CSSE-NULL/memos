@@ -3,7 +3,7 @@
         {
             "location": "/",
             "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Welcome to MkDocs"
+            "title": "Home"
         },
         {
             "location": "/#welcome-to-mkdocs",
@@ -19,6 +19,16 @@
             "location": "/#project-layout",
             "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
             "title": "Project layout"
+        },
+        {
+            "location": "/chrome/tricks/",
+            "text": "\u5730\u5740\u680f\u5207\u6362\u641c\u7d22\u5f15\u64ce\n\n\n\n\n\n\n\u8fdb\u5165\u641c\u7d22\u5f15\u64ce\u7684\u8bbe\u7f6e\u754c\u9762\uff0c\u5c06\u4e0d\u540c\u5f15\u64ce\u7684\u5173\u952e\u5b57\u8bbe\u7f6e\u4e3a\u65b9\u4fbf\u4f7f\u7528\u7684\uff0c\u4f8b\u5982baidu.com ,\u8bbe\u7f6e\u4e3abd\n\n\n\n\n\n\n\u5728\u5730\u5740\u680f\u8f93\u5165\u76f8\u5e94\u5173\u952e\u5b57\uff0c\u6309Tab\u952e\uff0c\u5207\u6362\u641c\u7d22\u5f15\u64ce",
+            "title": "\u5b9e\u7528\u6280\u5de7"
+        },
+        {
+            "location": "/chrome/tricks/#_1",
+            "text": "\u8fdb\u5165\u641c\u7d22\u5f15\u64ce\u7684\u8bbe\u7f6e\u754c\u9762\uff0c\u5c06\u4e0d\u540c\u5f15\u64ce\u7684\u5173\u952e\u5b57\u8bbe\u7f6e\u4e3a\u65b9\u4fbf\u4f7f\u7528\u7684\uff0c\u4f8b\u5982baidu.com ,\u8bbe\u7f6e\u4e3abd    \u5728\u5730\u5740\u680f\u8f93\u5165\u76f8\u5e94\u5173\u952e\u5b57\uff0c\u6309Tab\u952e\uff0c\u5207\u6362\u641c\u7d22\u5f15\u64ce",
+            "title": "\u5730\u5740\u680f\u5207\u6362\u641c\u7d22\u5f15\u64ce"
         }
     ]
 }
