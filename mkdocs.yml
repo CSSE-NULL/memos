@@ -1,2 +1,7 @@
 site_name: Damn interesting doc
 theme: readthedocs
+
+pages:
+- Home: index.md
+- Chrome:
+  - 实用技巧: chrome/tricks.md
