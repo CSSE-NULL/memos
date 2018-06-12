@@ -1,7 +1,10 @@
-site_name: Damn interesting doc
-theme: readthedocs
-
+site_name: my memos
+theme: 
+  name: 'material'
+markdown_extensions:
+  - codehilite
 pages:
 - Home: index.md
+- MkDocs: mkdocs/useguide.md
 - Chrome:
   - 实用技巧: chrome/tricks.md
