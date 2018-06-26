@@ -70,3 +70,12 @@ run:
     git push origin master
 ```
 保存后，以后提交就直接`make run`就行了。
+
+## 遇到的问题
+```
+pkg_resources.ContextualVersionConflict: (Markdown 2.6.6 (d:\python36-32\lib\site-packages), Requirement.parse('Markdown>=2.6.10'), {'pymdown-extensions'})
+```
+这是material主题引起的，把markdown库升级一下就好了。方法：
+```
+pip install Markdown==2.6.10
+```
