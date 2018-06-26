@@ -263,6 +263,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" title="遇到的问题" class="md-nav__link">
+    遇到的问题
+  </a>
+  
+</li>
+      
       
       
       
@@ -301,6 +308,42 @@
   <li class="md-nav__item">
     <a href="../../chrome/tricks/" title="实用技巧" class="md-nav__link">
       实用技巧
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/proxy/" title="开启ss代理加速" class="md-nav__link">
+      开启ss代理加速
     </a>
   </li>
 
@@ -386,6 +429,13 @@
         <li class="md-nav__item">
   <a href="#makefile" title="利用makefile进行管理" class="md-nav__link">
     利用makefile进行管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="遇到的问题" class="md-nav__link">
+    遇到的问题
   </a>
   
 </li>
@@ -482,6 +532,14 @@ git push origin master
 
 
 <p>保存后，以后提交就直接<code>make run</code>就行了。</p>
+<h2 id="_4">遇到的问题</h2>
+<div class="codehilite"><pre><span></span>pkg_resources.ContextualVersionConflict: (Markdown 2.6.6 (d:\python36-32\lib\site-packages), Requirement.parse(&#39;Markdown&gt;=2.6.10&#39;), {&#39;pymdown-extensions&#39;})
+</pre></div>
+
+
+<p>这是material主题引起的，把markdown库升级一下就好了。方法：</p>
+<div class="codehilite"><pre><span></span>pip install Markdown==2.6.10
+</pre></div>
                 
                   
                 
