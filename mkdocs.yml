@@ -6,6 +6,8 @@ markdown_extensions:
 pages:
 - Home: index.md
 - MkDocs: mkdocs/useguide.md
+- Python:
+  - 魔术方法: python/magic.md
 - Chrome:
   - 实用技巧: chrome/tricks.md
 - Git:
