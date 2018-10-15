@@ -12,3 +12,5 @@ pages:
   - 实用技巧: chrome/tricks.md
 - Git:
   - 开启ss代理加速: git/proxy.md
+- C++:
+  - 学习路线: C++/index.md 

@@ -36,7 +36,7 @@
     
     
       
-        <title>开启ss代理加速 - my memos</title>
+        <title>魔术方法 - my memos</title>
       
     
     
@@ -71,7 +71,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#git-shaodwsocks" tabindex="1" class="md-skip">
+      <a href="../../#all" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -97,7 +97,7 @@
                 my memos
               </span>
               <span class="md-header-nav__topic">
-                开启ss代理加速
+                魔术方法
               </span>
             
           
@@ -190,10 +190,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Python
@@ -209,11 +211,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../python/magic/" title="魔术方法" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="魔术方法" class="md-nav__link md-nav__link--active">
       魔术方法
     </a>
+    
   </li>
 
         
@@ -262,12 +273,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Git
@@ -283,45 +292,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        开启ss代理加速
-      </label>
-    
-    <a href="./" title="开启ss代理加速" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../git/proxy/" title="开启ss代理加速" class="md-nav__link">
       开启ss代理加速
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#git-shaodwsocks" title="git 设置shaodwsocks代理" class="md-nav__link">
-    git 设置shaodwsocks代理
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -380,22 +355,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#git-shaodwsocks" title="git 设置shaodwsocks代理" class="md-nav__link">
-    git 设置shaodwsocks代理
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
   
 </nav>
                   </div>
@@ -408,27 +369,48 @@
               
                 
                 
-                  <h1>开启ss代理加速</h1>
-                
-                <h2 id="git-shaodwsocks">git 设置shaodwsocks代理</h2>
-<p>今天体验了一把git下载国外仓库的缓慢速度（以前用github都没觉得这么慢），实在是不想等了，于是
-了解了一下如何用shadowsocks开代理加速，设置方法很简单：</p>
-<div class="codehilite"><pre><span></span>git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39;
+                <h1 id="all"><strong>all</strong></h1>
+<p>在看一个项目源码的时候，发现作者用了个这个，查了一下，了解如下：</p>
+<div class="codehilite"><pre><span></span><span class="err">这是一个字符串</span><span class="nb">list</span><span class="p">,</span><span class="err">用于外部调用</span> <span class="kn">from</span> <span class="nn">xx</span> <span class="kn">import</span> <span class="o">*</span> <span class="err">时，设定哪些变量和函数对外开放。</span>
 </pre></div>
 
 
-<p>这样就可以从原来十几k提升到几百k了（亲测）。需要注意，git不存在https.proxy设置的，这里是<code>http</code>,不带s,
-否则设置无效。
-这个可能比较麻烦的就是需要后台必须挂着sahdowsocks客户端，而且如果访问国内的仓库，加速估计会起反效果，
-因此这里也放一下关闭的方式：</p>
-<div class="codehilite"><pre><span></span>git config --global --unset http.proxy
+<p>例如存在以下文件<code>all.py</code>：</p>
+<div class="codehilite"><pre><span></span>__all__ = [&#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
+
+x = 2
+y = 3
+z = 4
+
+def test():
+    print(&#39;test&#39;)
 </pre></div>
 
 
-<p>查看<code>config --global</code>的所有选项：</p>
-<div class="codehilite"><pre><span></span>git config --global -l #列出来
-git config --global -e #编辑
+<p>新建文件<code>foo.py</code>：</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;x: &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;y: &#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;z: &#39;</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+<span class="n">test</span><span class="p">()</span>
 </pre></div>
+
+
+<p>结果如下：</p>
+<div class="codehilite"><pre><span></span><span class="n">x</span><span class="o">:</span>  <span class="mi">2</span>
+<span class="n">y</span><span class="o">:</span>  <span class="mi">3</span>
+<span class="n">z</span><span class="o">:</span>  <span class="mi">4</span>
+<span class="n">Traceback</span> <span class="o">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="o">):</span>
+  <span class="n">File</span> <span class="s2">&quot;foo.py&quot;</span><span class="o">,</span> <span class="n">line</span> <span class="mi">7</span><span class="o">,</span> <span class="k">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">test</span><span class="o">()</span>
+<span class="n">NameError</span><span class="o">:</span> <span class="n">name</span> <span class="s1">&#39;test&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">defined</span>
+</pre></div>
+
+
+<p>但是如果手动添加<code>from all import test</code>,依然可以解决问题。
+实用<code>__all__</code>的好处就是，可以设定哪些对外暴露，从而避免导入不必要的包。</p>
                 
                   
                 
@@ -449,7 +431,7 @@ git config --global -e #编辑
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../chrome/tricks/" title="实用技巧" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../mkdocs/useguide/" title="MkDocs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -458,19 +440,19 @@ git config --global -e #编辑
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                实用技巧
+                MkDocs
               </span>
             </div>
           </a>
         
         
-          <a href="../../C++/" title="学习路线" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../chrome/tricks/" title="实用技巧" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                学习路线
+                实用技巧
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

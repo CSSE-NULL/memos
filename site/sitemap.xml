@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>/</loc>
-     <lastmod>2018-06-26</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/mkdocs/useguide/</loc>
-     <lastmod>2018-06-26</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/chrome/tricks/</loc>
-     <lastmod>2018-06-26</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/git/proxy/</loc>
-     <lastmod>2018-06-26</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
