@@ -13,4 +13,6 @@ pages:
 - Git:
   - 开启ss代理加速: git/proxy.md
 - C++:
-  - 学习路线: C++/index.md 
+  - 学习路线: C++/index.md
+- ftp:
+  - 安装与使用: ftp/index.md
