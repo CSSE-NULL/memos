@@ -16,5 +16,7 @@ pages:
   - 学习路线: C++/index.md
 - ftp:
   - 安装与使用: ftp/index.md
+- ss:
+  - ubuntu上使用shaodwsocks-qt5: ss/ubuntu_ss.md
 - misc:
   - Windows命令行代理: misc/cmd_proxy.md
