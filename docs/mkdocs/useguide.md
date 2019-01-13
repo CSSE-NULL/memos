@@ -50,7 +50,7 @@ markdown_extensions:
 如果想更换其他主题，可参考：[mkdoc主题配置文档](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
 
 ## 部署到github
-- 在github上新开一个仓库，如`memos`
+- 在github上新开一个仓库，如`memos`,然后就可以通过下面的步骤将其部署到githubPages上去（通过 你的github用户名.gitub.io/memos访问）
 - 执行：
 ```
 mkdocs gh-deploy
