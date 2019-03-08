@@ -8,8 +8,8 @@ pages:
 - MkDocs: mkdocs/useguide.md
 - Python:
   - 魔术方法: python/magic.md
-- Chrome:
-  - 实用技巧: chrome/tricks.md
+- Linux:
+  - scp: Linux/scp.md
 - Git:
   - 常见命令: git/commands.md
   - 开启ss代理加速: git/proxy.md
@@ -21,3 +21,5 @@ pages:
   - ubuntu上使用shaodwsocks-qt5: ss/ubuntu_ss.md
 - misc:
   - Windows命令行代理: misc/cmd_proxy.md
+  - Chrome实用技巧: misc/tricks.md
+  - 源码安装: misc/origin_src.md
