@@ -5,7 +5,12 @@
 ### setuptool
 
 下载源码包: https://pypi.python.org/pypi/setuptools
-解压后进入目录执行：python setup.py install
+
+解压后进入目录执行：
+
+```py
+python setup.py install
+```
 
 ### pip
 
