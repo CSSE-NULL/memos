@@ -10,6 +10,9 @@ pages:
   - 魔术方法: python/magic.md
 - Linux:
   - scp: Linux/scp.md
+  - dd命令制作启动盘: Linux/dd.md
+- Latex:
+  - 错误总结: Latex/error.md
 - Git:
   - 常见命令: git/commands.md
   - 开启ss代理加速: git/proxy.md
