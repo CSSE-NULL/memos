@@ -22,6 +22,8 @@ pages:
   - 安装与使用: ftp/index.md
 - ss:
   - ubuntu上使用shaodwsocks-qt5: ss/ubuntu_ss.md
+- 工具使用:
+  - 文献资料管理-zotero: tools/zotero.md
 - misc:
   - Windows命令行代理: misc/cmd_proxy.md
   - Chrome实用技巧: misc/tricks.md
