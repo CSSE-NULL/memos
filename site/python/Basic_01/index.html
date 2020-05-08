@@ -1090,9 +1090,9 @@ b<em>c1&lt;=a,b</em>c2&gt;=a里，c1与c2中较小的一个(带符号),这就是
 </pre></div>
 
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以看出,对于整数,字符串类型,is为True,对于浮点数,元组,列表,字典为False.
-　　但是对于整数和字符串是存在特例的，python为了优化速度,使用了一个小整数对象池,只要在[-5,256]之间的整数都是提前建立好的,不会被垃圾回收,因此相应对象的id也相同.
-　　对于字符串,python也有着类似的策略,一些较短的字符串(不包含空格)也是同一个对象.</p>
+<p>可以看出,对于整数,字符串类型,is为True,对于浮点数,元组,列表,字典为False.</p>
+<p>但是对于整数和字符串是存在特例的，python为了优化速度,使用了一个小整数对象池,只要在[-5,256]之间的整数都是提前建立好的,不会被垃圾回收,因此相应对象的id也相同.</p>
+<p>对于字符串,python也有着类似的策略,一些较短的字符串(不包含空格)也是同一个对象.</p>
 <div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=-</span><span class="mi">6</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=-</span><span class="mi">6</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
