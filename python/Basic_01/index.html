@@ -1,0 +1,1429 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+    
+    
+      
+        <title>基础总结(一) - my memos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#basic-01" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="my memos" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              my memos
+            </span>
+            <span class="md-header-nav__topic">
+              
+                基础总结(一)
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="my memos" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    my memos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/useguide/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../magic/" title="魔术方法" class="md-nav__link">
+      魔术方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        基础总结(一)
+      </label>
+    
+    <a href="./" title="基础总结(一)" class="md-nav__link md-nav__link--active">
+      基础总结(一)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数学计算
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    整除和取余
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    乘方
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    优先级
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is" class="md-nav__link">
+    is和==
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    二进制，八进制，十六进制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    函数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    内置函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmath" class="md-nav__link">
+    cmath和复数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9595future9595" class="md-nav__link">
+    __future__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    字符串
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    拼接字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strrepr" class="md-nav__link">
+    str与repr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    原始字符串和长字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    字符串编码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    指定代码编码格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/scp/" title="scp" class="md-nav__link">
+      scp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/dd/" title="dd命令制作启动盘" class="md-nav__link">
+      dd命令制作启动盘
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Latex
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Latex
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Latex/error/" title="错误总结" class="md-nav__link">
+      错误总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/commands/" title="常见命令" class="md-nav__link">
+      常见命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/proxy/" title="开启ss代理加速" class="md-nav__link">
+      开启ss代理加速
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      C++
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../C++/" title="学习路线" class="md-nav__link">
+      学习路线
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ftp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ftp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ftp/" title="安装与使用" class="md-nav__link">
+      安装与使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      ss
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        ss
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ss/ubuntu_ss/" title="ubuntu上使用shaodwsocks-qt5" class="md-nav__link">
+      ubuntu上使用shaodwsocks-qt5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      工具使用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        工具使用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/zotero/" title="文献资料管理-zotero" class="md-nav__link">
+      文献资料管理-zotero
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      misc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        misc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/cmd_proxy/" title="Windows命令行代理" class="md-nav__link">
+      Windows命令行代理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/tricks/" title="Chrome实用技巧" class="md-nav__link">
+      Chrome实用技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/origin_src/" title="源码安装" class="md-nav__link">
+      源码安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数学计算
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    整除和取余
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    乘方
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    优先级
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is" class="md-nav__link">
+    is和==
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    二进制，八进制，十六进制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    函数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    内置函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmath" class="md-nav__link">
+    cmath和复数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9595future9595" class="md-nav__link">
+    __future__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    字符串
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    拼接字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strrepr" class="md-nav__link">
+    str与repr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    原始字符串和长字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    字符串编码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    指定代码编码格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="basic-01">Basic 01</h1>
+<h2 id="_1">数学计算</h2>
+<h3 id="_2">整除和取余</h3>
+<p>Python3中的整除用的是<code>//</code>符号，采用的是向下取整，如：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">10</span><span class="o">//</span><span class="mi">3</span>
+<span class="o">-</span><span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span><span class="o">//-</span><span class="mi">3</span>
+<span class="o">-</span><span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span><span class="o">//</span><span class="mi">3</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">10</span><span class="o">//-</span><span class="mi">3</span>
+<span class="mi">3</span>
+</pre></div>
+
+
+<p>这里可以看出，整除可以作用于负数，而<code>a//b=c</code>取的是:
+b<em>c1&lt;=a,b</em>c2&gt;=a里，c1与c2中较小的一个(带符号),这就是所谓的向下取整。
+依据<code>a mod b = a- (a//b *b)</code>的公式可以推出取余的结果：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span><span class="o">%</span><span class="mi">3</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span><span class="o">%-</span><span class="mi">3</span>
+<span class="o">-</span><span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">10</span><span class="o">%</span><span class="mi">3</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">10</span><span class="o">%-</span><span class="mi">3</span>
+<span class="o">-</span><span class="mi">1</span>
+</pre></div>
+
+
+<h3 id="_3">乘方</h3>
+<p>乘方的优先级比负号(单目求负)的优先级高，因此<code>-3**2</code>会出现：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
+<span class="o">-</span><span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="mi">9</span>
+</pre></div>
+
+
+<h3 id="_4">优先级</h3>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>**</td>
+<td>指数 (最高优先级)</td>
+</tr>
+<tr>
+<td>~ + -</td>
+<td>按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)</td>
+</tr>
+<tr>
+<td>* / % //</td>
+<td>乘，除，取模和取整除</td>
+</tr>
+<tr>
+<td>+ -</td>
+<td>加法减法</td>
+</tr>
+<tr>
+<td>&gt;&gt; &lt;&lt;</td>
+<td>右移，左移运算符</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>位 'AND'</td>
+</tr>
+<tr>
+<td>^ |</td>
+<td>位运算符</td>
+</tr>
+<tr>
+<td>&lt;= &lt; &gt; &gt;=</td>
+<td>比较运算符</td>
+</tr>
+<tr>
+<td>&lt;&gt; == !=</td>
+<td>等于运算符</td>
+</tr>
+<tr>
+<td>= %= /= //= -= += = *=</td>
+<td>赋值运算符</td>
+</tr>
+<tr>
+<td>is is not</td>
+<td>身份运算符</td>
+</tr>
+<tr>
+<td>in not in</td>
+<td>成员运算符</td>
+</tr>
+<tr>
+<td>not or and</td>
+<td>逻辑运算符</td>
+</tr>
+</tbody>
+</table>
+<h4 id="is">is和==</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个对象拥有三个基本元素：id,类型和值。而is是对对象id的判断，==是对对象值的判断。</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="mf">1.23</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="mf">1.23</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="s1">&#39;test&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;test&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">2343361272424</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="mi">2343368258904</span>
+</pre></div>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以看出,对于整数,字符串类型,is为True,对于浮点数,元组,列表,字典为False.
+　　但是对于整数和字符串是存在特例的，python为了优化速度,使用了一个小整数对象池,只要在[-5,256]之间的整数都是提前建立好的,不会被垃圾回收,因此相应对象的id也相同.
+　　对于字符串,python也有着类似的策略,一些较短的字符串(不包含空格)也是同一个对象.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=-</span><span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=-</span><span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=-</span><span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=-</span><span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="mi">256</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="mi">256</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="mi">257</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="mi">257</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="s1">&#39;ab&#39;</span><span class="o">*</span><span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;ab&#39;</span><span class="o">*</span><span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mi">1000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mi">1000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mi">100000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mi">100000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="s1">&#39;a b&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;a b&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+<span class="bp">False</span>
+</pre></div>
+
+
+<h3 id="_5">二进制，八进制，十六进制</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mb">0b10</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span><span class="n">o10</span>
+<span class="mi">8</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mh">0x10</span>
+<span class="mi">16</span>
+</pre></div>
+
+
+<p><code>0b</code>,<code>0o</code>,<code>0x</code>分别代表以上三种进制。</p>
+<h2 id="_6">变量</h2>
+<p>名称（ 标识符） 只能由字母、数字和下划线（_）构成，且不能以数字打头。</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="err">$</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">9</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a9</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+
+<h2 id="_7">语句</h2>
+<p>语句和表达式：表达式表示一种东西，而语句表示做一件事。例如：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="o">*</span><span class="mi">2</span> <span class="c1">#表达式</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="mi">2</span> <span class="c1">#y赋值语句，执行赋值操作</span>
+</pre></div>
+
+
+<p>注意：Python3中print为函数，而Python2中为语句，因此前者需要括号传参，后者不用。</p>
+<h2 id="_8">函数</h2>
+<h3 id="_9">内置函数</h3>
+<p>Python提供一些标准函数，如<code>abs,round,pow</code>等，这种函数称作<code>内置函数</code>。</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#等价于2**2</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="o">//</span><span class="mi">3</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">round</span><span class="p">(</span><span class="mi">2</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#该函数就近取整，如果两端一样近（如0.5），那么就取偶数</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">round</span><span class="p">(</span><span class="mi">7</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">round</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">round</span><span class="p">(</span><span class="mi">5</span><span class="o">/-</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">-</span><span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#取绝对值</span>
+<span class="mi">3</span>
+</pre></div>
+
+
+<p>其中的<code>round</code>函数需要注意。如果我们需要强制向下取整，可以使用<code>floor</code>，不过这个函数在模块中，无法直接调用。</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">floor</span><span class="p">(</span><span class="mf">3.5</span><span class="p">)</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;floor&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</pre></div>
+
+
+<p>更多内置函数参考:<a href="https://docs.python.org/3/library/functions.html">Python3 Built-in Functions</a></p>
+<h3 id="_10">模块</h3>
+<p>模块是Python的扩展，也就是说通过导入模块可以增加扩展功能。比如前面的<code>floor</code>存在于<code>math</code>中，可以通过<code>import</code>导入，并通过<code>module.func</code>来执行：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">)</span> <span class="c1">#向下取整</span>
+<span class="o">-</span><span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mf">3.5</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">3.2</span><span class="p">)</span> <span class="c1">#向上取整</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="o">-</span><span class="mf">3.2</span><span class="p">)</span>
+<span class="o">-</span><span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mf">3.5</span><span class="p">)</span> <span class="c1">#这里与上面效果相同，int强制丢掉小数</span>
+<span class="mi">3</span>
+</pre></div>
+
+
+<p>注意：还有一些函数如str,float可以进行类似转换，但是它们属于类，不是函数。</p>
+<p>如果不考虑重名问题，可以通过直接引用函数来避免每次调用函数都带上模块名。同时，也可以将函数名赋值给变量，从而使变量代替该函数。</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mf">2.0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ceil</span><span class="p">(</span><span class="mf">4.3</span><span class="p">)</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;ceil&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="p">(</span><span class="mf">4.3</span><span class="p">)</span>
+<span class="mi">5</span>
+</pre></div>
+
+
+<h3 id="cmath">cmath和复数</h3>
+<p>当需要使用复数时，可引入<code>cmath</code>：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">math</span> <span class="n">domain</span> <span class="n">error</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">cmath</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cmath</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">1j</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2j</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">0j</span><span class="p">)</span>
+</pre></div>
+
+
+<p>其中，可发现这里不适合再次使用<code>from import</code>语句，因为出现了重名函数<code>sqrt</code>。同时，虚数不是单独类型，而是实部为0的复数。</p>
+<h3 id="9595future9595">__future__</h3>
+<p>这个模块用于导入未来的功能（比如在python2中调用python3的print）</p>
+<h2 id="_11">字符串</h2>
+<p>Python字符串用单引号和双引号都一样，只是为了方便内容存在其中一种符号时，可用另一种符号进行限定，但是如果两种符号同时出现，还是需要转义。</p>
+<h3 id="_12">拼接字符串</h3>
+<p>Python支持多个字符串并列自动拼接（只限字符串，赋值之后变量无法自动拼接）</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="s2">&quot;b&quot;</span>
+<span class="s1">&#39;ab&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="s2">&quot;b&quot;</span> <span class="s2">&quot;c&quot;</span>
+<span class="s1">&#39;abc&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;a&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;b&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="n">y</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+
+
+<p>更常见的方式是使用<code>+</code>号：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;hello&#39;</span><span class="o">+</span><span class="s1">&#39;boy&#39;</span>
+<span class="s1">&#39;helloboy&#39;</span>
+</pre></div>
+
+
+<h3 id="strrepr">str与repr</h3>
+<p>字符串包括代码形式(repr)和显示形式（str），可通过两种函数强制转换：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="s1">&#39;hello</span><span class="se">\n</span><span class="s1">boy&#39;</span><span class="p">))</span>
+<span class="s1">&#39;hello</span><span class="se">\n</span><span class="s1">boy&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="s1">&#39;hello</span><span class="se">\n</span><span class="s1">boy&#39;</span><span class="p">))</span>
+<span class="n">hello</span>
+<span class="n">boy</span>
+</pre></div>
+
+
+<h3 id="_13">原始字符串和长字符串</h3>
+<p>Python支持长字符串多行输入，可以通过三引号或在末尾加<code>\</code>来实现：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;test</span>
+<span class="s1">... fiz buz</span>
+<span class="s1">... foo bar</span>
+<span class="s1">... &#39;&#39;&#39;</span>
+<span class="o">...</span> <span class="p">)</span>
+<span class="n">test</span>
+<span class="n">fiz</span> <span class="n">buz</span>
+<span class="n">foo</span> <span class="n">bar</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span> \
+<span class="o">...</span> <span class="o">+</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span> \
+<span class="o">...</span> <span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="mi">6</span> \
+<span class="o">...</span> <span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">8</span>
+<span class="mi">36</span>
+</pre></div>
+
+
+<p>当我们不需要转义时，可在字符串前加<code>r</code>来处理：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;c:\test\num&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="p">:</span>\<span class="n">test</span>\<span class="n">num</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;let</span><span class="se">\&#39;</span><span class="s1">s go&#39;</span><span class="p">)</span> <span class="c1">#内容中有与括起来的引号一样的引号时，需要转义，此时斜杠也会在打印内容中出现。</span>
+<span class="n">let</span>\<span class="s1">&#39;s go</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;c:\test\num</span><span class="se">\&#39;</span><span class="s1">) #根据上面内容可知，末尾不能有转义符</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">EOL</span> <span class="k">while</span> <span class="n">scanning</span> <span class="n">string</span> <span class="n">literal</span>
+</pre></div>
+
+
+<p>要解决末尾转义问题，可以通过字符串拼接方式：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;c:\test\num&#39;</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="p">:</span>\<span class="n">test</span>\<span class="n">num</span>\
+</pre></div>
+
+
+<h3 id="_14">字符串编码</h3>
+<p>Python3默认字符串编码为Unicode,实际上是一个<code>code points</code>序列，每一个字符都对应一个十六进制数（0-0x10FFFF）。但是如果我们想要把这些内容存储为以bytes为单位（0-255）的值，我们需要进行<code>encoding</code>。我们可以通过32位整数来进行表示，但是其实大多数字符（比如字母）都是在ASCII码范围内的，所以这种粗暴的方式会导致内存占用加大，而且受限于机器的架构。更加通用的代替方式是<code>UTF-8</code>,代表以8bits为单位的<code>Unicode Tranformation Format</code>。这样做的好处是：对于常用的字符（标准ASCII，小于128），可以直接用原数值进行存储。大于128时，通过多个bytes进行变长编码，从而保证了高效性。具体执行如下：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;foo bar&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;foo bar&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;foo bar&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;foo bar&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;foo bar&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-32&#39;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xfe\x00\x00</span><span class="s1">f</span><span class="se">\x00\x00\x00</span><span class="s1">o</span><span class="se">\x00\x00\x00</span><span class="s1">o</span><span class="se">\x00\x00\x00</span><span class="s1"> </span><span class="se">\x00\x00\x00</span><span class="s1">b</span><span class="se">\x00\x00\x00</span><span class="s1">a</span><span class="se">\x00\x00\x00</span><span class="s1">r</span><span class="se">\x00\x00\x00</span><span class="s1">&#39;</span>
+</pre></div>
+
+
+<p>上文可见，编码后其实都转换为了bytes这种不可变的二进制形式。当某些情况必须转换成二进制时，可进行一些设置：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hællå, wørld!&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">)</span> <span class="c1">#默认参数为strict</span>
+<span class="ne">UnicodeEncodeError</span><span class="p">:</span> <span class="s1">&#39;ascii&#39;</span> <span class="n">codec</span> <span class="n">can</span><span class="s1">&#39;t encode character &#39;</span>\<span class="n">xe6</span><span class="s1">&#39; in position 1: ordinal not in range(128)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hællå, wørld!&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">,</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;Hll, wrld!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hællå, wørld!&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">,</span><span class="s2">&quot;replace&quot;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;H?ll?, w?rld!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hællå, wørld!&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">,</span><span class="s2">&quot;backslashreplace&quot;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;H</span><span class="se">\\</span><span class="s1">xe6ll</span><span class="se">\\</span><span class="s1">xe5, w</span><span class="se">\\</span><span class="s1">xf8rld!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hællå, wørld!&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ASCII&quot;</span><span class="p">,</span><span class="s2">&quot;xmlcharrefreplace&quot;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;H&amp;#230;ll&amp;#229;, w&amp;#248;rld!&#39;</span>
+</pre></div>
+
+
+<p>从而强制进行相应转换，默认编码是utf-8:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hællå, wørld!&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;H</span><span class="se">\xc3\xa6</span><span class="s1">ll</span><span class="se">\xc3\xa5</span><span class="s1">, w</span><span class="se">\xc3\xb8</span><span class="s1">rld!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="sa">b</span><span class="s1">&#39;H</span><span class="se">\xc3\xa6</span><span class="s1">ll</span><span class="se">\xc3\xa5</span><span class="s1">, w</span><span class="se">\xc3\xb8</span><span class="s1">rld!&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<span class="s1">&#39;Hællå, wørld!&#39;</span>
+</pre></div>
+
+
+<p>也可以直接创建str和bytes(一定要指定encoding):</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">bytes</span><span class="p">(</span><span class="s2">&quot;Hællå, wørld!&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;H</span><span class="se">\xc3\xa6</span><span class="s1">ll</span><span class="se">\xc3\xa5</span><span class="s1">, w</span><span class="se">\xc3\xb8</span><span class="s1">rld!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;H</span><span class="se">\xc3\xa6</span><span class="s1">ll</span><span class="se">\xc3\xa5</span><span class="s1">, w</span><span class="se">\xc3\xb8</span><span class="s1">rld!&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="s1">&#39;Hællå, wørld!</span>
+</pre></div>
+
+
+<p>同时，Python还提供了一种可修改字符串<code>bytearray</code>（bytes不能改），但是改的时候需要设置对应位置的值在0-255之间，如下：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;heheda&#39;</span><span class="p">)</span> <span class="c1">#不要忘记前面的b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="nb">ord</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;u&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="nb">bytearray</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;huheda&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="_15">指定代码编码格式</h3>
+<p>开头写上:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># -*- coding: encoding name -*-</span>
+</pre></div>
+
+
+<p>就好。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../magic/" title="魔术方法" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                魔术方法
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Linux/scp/" title="scp" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                scp
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
