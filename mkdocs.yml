@@ -8,7 +8,8 @@ pages:
 - MkDocs: mkdocs/useguide.md
 - Python:
   - 魔术方法: python/magic.md
-  - 基础总结(一): python/Basic_01.md
+  - 基础总结(一)-基础知识: python/Basic_01.md
+  - 基础总结(二)-序列: python/Basic_02.md
 - Linux:
   - scp: Linux/scp.md
   - dd命令制作启动盘: Linux/dd.md
