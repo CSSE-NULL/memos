@@ -1,0 +1,1279 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+    
+    
+      
+        <title>基础总结(二)-字符串 - my memos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="my memos" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              my memos
+            </span>
+            <span class="md-header-nav__topic">
+              
+                基础总结(二)-字符串
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="my memos" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    my memos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/useguide/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../magic/" title="魔术方法" class="md-nav__link">
+      魔术方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_01/" title="基础总结(一)-基础知识" class="md-nav__link">
+      基础总结(一)-基础知识
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_02/" title="基础总结(二)-序列" class="md-nav__link">
+      基础总结(二)-序列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        基础总结(二)-字符串
+      </label>
+    
+    <a href="./" title="基础总结(二)-字符串" class="md-nav__link md-nav__link--active">
+      基础总结(二)-字符串
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    设置字符串格式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    %方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    高级操作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    替换字段名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    格式设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    字符串方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    string模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#center" class="md-nav__link">
+    center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    join
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lowertitlecapwords" class="md-nav__link">
+    lower,title,capwords
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacetranslate" class="md-nav__link">
+    replace,translate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strip" class="md-nav__link">
+    strip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is" class="md-nav__link">
+    is***
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/scp/" title="scp" class="md-nav__link">
+      scp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/dd/" title="dd命令制作启动盘" class="md-nav__link">
+      dd命令制作启动盘
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Latex
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Latex
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Latex/error/" title="错误总结" class="md-nav__link">
+      错误总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/commands/" title="常见命令" class="md-nav__link">
+      常见命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/proxy/" title="开启ss代理加速" class="md-nav__link">
+      开启ss代理加速
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      C++
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../C++/" title="学习路线" class="md-nav__link">
+      学习路线
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ftp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ftp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ftp/" title="安装与使用" class="md-nav__link">
+      安装与使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      ss
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        ss
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ss/ubuntu_ss/" title="ubuntu上使用shaodwsocks-qt5" class="md-nav__link">
+      ubuntu上使用shaodwsocks-qt5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      工具使用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        工具使用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/zotero/" title="文献资料管理-zotero" class="md-nav__link">
+      文献资料管理-zotero
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      misc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        misc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/cmd_proxy/" title="Windows命令行代理" class="md-nav__link">
+      Windows命令行代理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/tricks/" title="Chrome实用技巧" class="md-nav__link">
+      Chrome实用技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/origin_src/" title="源码安装" class="md-nav__link">
+      源码安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    设置字符串格式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    %方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    高级操作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    替换字段名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    格式设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    字符串方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    string模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#center" class="md-nav__link">
+    center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    join
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lowertitlecapwords" class="md-nav__link">
+    lower,title,capwords
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacetranslate" class="md-nav__link">
+    replace,translate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strip" class="md-nav__link">
+    strip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is" class="md-nav__link">
+    is***
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">字符串</h1>
+<h2 id="_2">设置字符串格式</h2>
+<h3 id="_3">%方法</h3>
+<p>这种方法比较经典,与C里面的差不多,通过格式化字符串来进行操作:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">format</span> <span class="o">=</span> <span class="s2">&quot;test </span><span class="si">%s</span><span class="s2"> format in </span><span class="si">%s</span><span class="s2"> &quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span><span class="s1">&#39;the world&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">format</span> <span class="o">%</span> <span class="n">values</span>
+<span class="s1">&#39;test hello format in the world &#39;</span>
+</pre></div>
+
+
+<h3 id="template">Template</h3>
+<p>这是一种类UNIX Shell的形式.表示如下:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">Template</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s2">&quot;hello,$who! $what is good?&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tmp</span><span class="o">.</span><span class="n">substitute</span><span class="p">(</span><span class="n">who</span><span class="o">=</span><span class="s2">&quot;Guo&quot;</span><span class="p">,</span><span class="n">what</span><span class="o">=</span><span class="s2">&quot;the weather&quot;</span><span class="p">)</span>
+<span class="s1">&#39;hello,Guo! the weather is good?&#39;</span>
+</pre></div>
+
+
+<h3 id="format">format</h3>
+<p>这种方式是集成了以上两种,且十分易操作:</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{} is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">,</span><span class="s1">&#39;good&#39;</span><span class="p">)</span>
+<span class="s1">&#39;Tom is good&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;{1} {0} {3} {2} {1} {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;be&#39;</span><span class="p">,</span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="s1">&#39;not&#39;</span><span class="p">,</span><span class="s1">&#39;or&#39;</span><span class="p">)</span> <span class="c1"># 参数默认下表从0开始递增,因此括号里的索引代表的就是对应的单词</span>
+<span class="s1">&#39;to be or not to be&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{name} is approximately {value:.2f}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">pi</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;π&#39;</span><span class="p">)</span> <span class="c1"># 设置名称,以及格式</span>
+<span class="s1">&#39;π is approximately 3.14.&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{name} is approximately {value}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">pi</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;π&#39;</span><span class="p">)</span> <span class="c1"># 不设置格式的情况下</span>
+<span class="s1">&#39;π is approximately 3.141592653589793.&#39;</span>
+</pre></div>
+
+
+<h2 id="_4">高级操作</h2>
+<h3 id="_5">替换字段名</h3>
+<p>你可以用上文中的占位符来指代变量,也可以通过索引处理,</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{foo} {} {bar} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">bar</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="s1">&#39;false&#39;</span><span class="p">)</span> <span class="c1"># 关键字参数应该在后面</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">positional</span> <span class="n">argument</span> <span class="n">follows</span> <span class="n">keyword</span> <span class="n">argument</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{foo} {} {bar} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="s1">&#39;false&#39;</span><span class="p">,</span><span class="n">foo</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">bar</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="s1">&#39;1 is 2 false&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{foo} {1} {bar} {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="s1">&#39;false&#39;</span><span class="p">,</span><span class="n">foo</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">bar</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 用索引指定顺序</span>
+<span class="s1">&#39;1 false 2 is&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">fn</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;guo&#39;</span><span class="p">,</span><span class="s1">&#39;hu&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Mr {name[1]}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">fn</span><span class="p">)</span>
+<span class="s1">&#39;Mr hu&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tmp</span> <span class="o">=</span> <span class="s2">&quot;the {mod.__name__} module defines the value {mod.pi} for π&quot;</span> <span class="c1"># 通过模块的属性,点运算符指定</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tmp</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mod</span><span class="o">=</span><span class="n">math</span><span class="p">)</span>
+<span class="s1">&#39;the math module defines the value 3.141592653589793 for π&#39;</span>
+</pre></div>
+
+
+<h3 id="_6">格式设置</h3>
+<p>这一部分和其他语言一样,主要包括:对齐,宽度,精度,千位分隔符</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;the name is {num:n}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mf">0.2222</span><span class="p">)</span>
+<span class="s1">&#39;the name is 0.2222&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;the name is {num:%}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mf">0.2222</span><span class="p">)</span>
+<span class="s1">&#39;the name is 22.220000%&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;the name is {num:.2%}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mf">0.2222</span><span class="p">)</span> <span class="c1"># 百分比表示,小数点保留两位</span>
+<span class="s1">&#39;the name is 22.22%&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;the name is {num:,}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">222200000000</span><span class="p">)</span> <span class="c1"># 使用千位分隔符</span>
+<span class="s1">&#39;the name is 222,200,000,000&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;the name is {num:10,.2g}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mf">2222299999999999.2222</span><span class="p">)</span> <span class="c1"># 顺序为宽度,千位分隔符,小数位数,格式</span>
+<span class="s1">&#39;the name is    2.2e+15&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;the name is {num:10,.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mf">2222299999999999.2222</span><span class="p">)</span>
+<span class="s1">&#39;the name is 2,222,299,999,999,999.25&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;the name is {num:010,.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mf">3.14</span><span class="p">)</span>
+<span class="s1">&#39;the name is 000,003.14&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{0:&lt;10.2f}</span><span class="se">\n</span><span class="s2">{0:^10.2f}</span><span class="se">\n</span><span class="s2">{0:&gt;10.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+<span class="s1">&#39;3.14      </span><span class="se">\n</span><span class="s1">   3.14   </span><span class="se">\n</span><span class="s1">      3.14&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0:&lt;10.2f}</span><span class="se">\n</span><span class="s2">{0:^10.2f}</span><span class="se">\n</span><span class="s2">{0:&gt;10.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span> <span class="c1">#三种对齐方式</span>
+<span class="mf">3.14</span>
+   <span class="mf">3.14</span>
+      <span class="mf">3.14</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{:$^15}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;WIN BIG&quot;</span><span class="p">)</span> <span class="c1"># 设置填充符号</span>
+<span class="s1">&#39;$$$$WIN BIG$$$$&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;{:010.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+<span class="s1">&#39;0000003.14&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{0:10.2f}</span><span class="se">\n</span><span class="s1">{1:=10.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="o">-</span><span class="n">pi</span><span class="p">))</span> <span class="c1"># =设置空格放在符号和数字之间</span>
+      <span class="mf">3.14</span>
+<span class="o">-</span>     <span class="mf">3.14</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{0:+10.2f}</span><span class="se">\n</span><span class="s1">{1:+10.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="o">-</span><span class="n">pi</span><span class="p">))</span> <span class="c1"># 默认为-,设置+表示正数前加正号</span>
+     <span class="o">+</span><span class="mf">3.14</span>
+     <span class="o">-</span><span class="mf">3.14</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{:b}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="s1">&#39;101010&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{:#b}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="c1"># 井号用于进制转换</span>
+<span class="s1">&#39;0b101010&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{:g}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="s1">&#39;42&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;{:#g}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="c1">#井号用于强制正数带小数</span>
+<span class="s1">&#39;42.0000&#39;</span>
+</pre></div>
+
+
+<h2 id="_7">字符串方法</h2>
+<h3 id="string">string模块</h3>
+<p>虽说Python已经将很多string模块的功能直接集成到字符串上了，但是仍然有一些比较有用的方法：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">string</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span> <span class="c1"># 包含数字0-9的字符串</span>
+<span class="s1">&#39;0123456789&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="c1"># 所有ascii码字母，大小写都有</span>
+<span class="s1">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span> <span class="c1"># 小写字母</span>
+<span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span> <span class="c1"># 大写字母</span>
+<span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span> <span class="c1"># 可打印的所有ascii字符</span>
+<span class="s1">&#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!&quot;#$%&amp;</span><span class="se">\&#39;</span><span class="s1">()*+,-./:;&lt;=&gt;?@[</span><span class="se">\\</span><span class="s1">]^_`{|}~ </span><span class="se">\t\n\r\x0b\x0c</span><span class="s1">&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span> <span class="c1"># 所有ascii符号</span>
+<span class="s1">&#39;!&quot;#$%&amp;</span><span class="se">\&#39;</span><span class="s1">()*+,-./:;&lt;=&gt;?@[</span><span class="se">\\</span><span class="s1">]^_`{|}~&#39;</span>
+</pre></div>
+
+
+<h3 id="center">center</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;to be or not to be&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="c1"># 用于在字符串左右填充字符（默认空格），使字符串居中</span>
+<span class="s1">&#39;           to be or not to be           &#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;to be or not to be&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<span class="s1">&#39;***********to be or not to be***********&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;to be or not to be&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">40</span>
+</pre></div>
+
+
+<h3 id="find">find</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">quote</span> <span class="o">=</span> <span class="s2">&quot;to be or not to be&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">quote</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;be&#39;</span><span class="p">)</span> <span class="c1"># 找子串是否在字符串中，在则返回子串的第一个索引</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">quote</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;not&#39;</span><span class="p">)</span> 
+<span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">quote</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;no&#39;</span><span class="p">)</span>
+<span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">quote</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;nooo&#39;</span><span class="p">)</span> <span class="c1"># 不存在则返回-1</span>
+<span class="o">-</span><span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">quote</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;be&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># find可以指定查找范围，这里指定索引下限</span>
+<span class="mi">16</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">quote</span><span class="p">)</span>
+<span class="mi">18</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">quote</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">17</span><span class="p">)</span> <span class="c1"># 同时指定上限和下限（不包含）</span>
+<span class="mi">13</span>
+</pre></div>
+
+
+<h3 id="join">join</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">seq</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="c1"># 用于合并序列元素，仅限于字符串元素</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">sequence</span> <span class="n">item</span> <span class="mi">0</span><span class="p">:</span> <span class="n">expected</span> <span class="nb">str</span> <span class="n">instance</span><span class="p">,</span> <span class="nb">int</span> <span class="n">found</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seq</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+<span class="s1">&#39;1+2+3+4&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dirs</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;usr&#39;</span><span class="p">,</span> <span class="s1">&#39;bin&#39;</span><span class="p">,</span> <span class="s1">&#39;env&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirs</span><span class="p">)</span>
+<span class="s1">&#39;/usr/bin/env&#39;</span>
+</pre></div>
+
+
+<h3 id="lowertitlecapwords">lower,title,capwords</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Harry Potter&quot;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># 全部改为小写字母</span>
+<span class="s1">&#39;harry potter&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;haRry potter&quot;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span> <span class="c1"># 首字母大写，其他小写</span>
+<span class="s1">&#39;Harry Potter&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">capwords</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">capwords</span><span class="p">(</span><span class="s2">&quot;that&#39;s good&quot;</span><span class="p">)</span> <span class="c1"># 首字母大写</span>
+<span class="s2">&quot;That&#39;s Good&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;that&#39;s good&quot;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span> <span class="c1"># 首字母大写，但是可能边界单词会出错（比如这里的that&#39;s）</span>
+<span class="s2">&quot;That&#39;S Good&quot;</span>
+</pre></div>
+
+
+<h3 id="replacetranslate">replace,translate</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;harry potter&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;harry&quot;</span><span class="p">,</span><span class="s1">&#39;james&#39;</span><span class="p">)</span> <span class="c1"># 用第二个字符串代替第一个</span>
+<span class="s1">&#39;james potter&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;ar&#39;</span><span class="p">,</span><span class="s1">&#39;bq&#39;</span><span class="p">)</span> <span class="c1"># 构建转换表，a-&gt;b,b-&gt;q</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">table</span>
+<span class="p">{</span><span class="mi">97</span><span class="p">:</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">114</span><span class="p">:</span> <span class="mi">113</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;harry potter&quot;</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> <span class="c1"># translate用于执行对应的转换</span>
+<span class="s1">&#39;hbqqy potteq&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;ar&#39;</span><span class="p">,</span><span class="s1">&#39;bq&#39;</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">)</span> <span class="c1"># 第三个参数可省略，表示去除某些字母</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;harry potter&quot;</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<span class="s1">&#39;hbqqy poeq&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;ar&#39;</span><span class="p">,</span><span class="s1">&#39;bq&#39;</span><span class="p">,</span><span class="s1">&#39;tq&#39;</span><span class="p">)</span> <span class="c1"># 这里q是转换后才有的，所以不能去除</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;harry potter&quot;</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<span class="s1">&#39;hbqqy poeq&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">table</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;ar&#39;</span><span class="p">,</span><span class="s1">&#39;bq&#39;</span><span class="p">,</span><span class="s1">&#39;th&#39;</span><span class="p">)</span> <span class="c1"># h是转换前就有的，所以转换时会去除</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;harry potter&quot;</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<span class="s1">&#39;bqqy poeq&#39;</span>
+</pre></div>
+
+
+<h3 id="strip">strip</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;  harry potter   &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># 去除首尾部分的空格</span>
+<span class="s1">&#39;harry potter&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39; !*# harry * potter ##!  &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39; !*#&#39;</span><span class="p">)</span> <span class="c1"># 去除首尾部分的指定字符（不包含中间部分）</span>
+<span class="s1">&#39;harry * potter&#39;</span>
+</pre></div>
+
+
+<h3 id="is">is***</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;23&#39;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;23a&#39;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;23a#&#39;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;a&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;3&#39;</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0100&#39;</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0.222&#39;</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;else&#39;</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;else if&#39;</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">()</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;else if&#39;</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;else if&#39;</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;else if&#39;</span><span class="o">.</span><span class="n">isprintable</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;A Dog&#39;</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;A Dog&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+<span class="bp">False</span>
+</pre></div>
+
+
+<p>注: 区分isdigit,isdecimal,isnumeric</p>
+<div class="codehilite"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>  <span class="c1">#unicode</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>   <span class="c1"># True</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span> <span class="c1"># True</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="c1"># True</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span> <span class="c1"># 全角</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>   <span class="c1"># True</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span> <span class="c1"># True</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="c1"># True</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;1&quot;</span> <span class="c1"># byte</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>   <span class="c1"># True</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span> <span class="c1"># AttributeError &#39;bytes&#39; object has no attribute &#39;isdecimal&#39;</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="c1"># AttributeError &#39;bytes&#39; object has no attribute &#39;isnumeric&#39;</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="s2">&quot;IV&quot;</span> <span class="c1"># 罗马数字</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>   <span class="c1"># True</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span> <span class="c1"># False</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="c1"># True</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="s2">&quot;四&quot;</span> <span class="c1"># 汉字</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>   <span class="c1"># False</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span> <span class="c1"># False</span>
+<span class="n">num</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="c1"># True</span>
+
+<span class="n">isdigit</span><span class="p">()</span>
+<span class="bp">True</span><span class="p">:</span> <span class="n">Unicode数字</span><span class="err">，</span><span class="n">byte数字</span><span class="err">（单字节），全角数字（双字节），罗马数字</span>
+<span class="bp">False</span><span class="p">:</span> <span class="err">汉字数字</span>
+<span class="n">Error</span><span class="p">:</span> <span class="err">无</span>
+
+<span class="n">isdecimal</span><span class="p">()</span>
+<span class="bp">True</span><span class="p">:</span> <span class="n">Unicode数字</span><span class="err">，，全角数字（双字节）</span>
+<span class="bp">False</span><span class="p">:</span> <span class="err">罗马数字，汉字数字</span>
+<span class="n">Error</span><span class="p">:</span> <span class="n">byte数字</span><span class="err">（单字节）</span>
+
+<span class="n">isnumeric</span><span class="p">()</span>
+<span class="bp">True</span><span class="p">:</span> <span class="n">Unicode数字</span><span class="err">，全角数字（双字节），罗马数字，汉字数字</span>
+<span class="bp">False</span><span class="p">:</span> <span class="err">无</span>
+<span class="n">Error</span><span class="p">:</span> <span class="n">byte数字</span><span class="err">（单字节）</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Basic_02/" title="基础总结(二)-序列" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                基础总结(二)-序列
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Linux/scp/" title="scp" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                scp
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
