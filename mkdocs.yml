@@ -7,11 +7,20 @@ pages:
 - Home: index.md
 - MkDocs: mkdocs/useguide.md
 - Python:
-  - 魔术方法: python/magic.md
   - 基础总结(一)-基础知识: python/Basic_01.md
   - 基础总结(二)-序列: python/Basic_02.md
   - 基础总结(三)-字符串: python/Basic_03.md
   - 基础总结(四)-字典: python/Basic_04.md
+  - 基础总结(五)-基本语句: python/Basic_05.md
+  - 基础总结(六)-函数: python/Basic_06.md
+  - 基础总结(七)-面向对象: python/Basic_07.md
+  - 基础总结(八)-异常处理: python/Basic_08.md
+  - 基础总结(九)-魔法方法: python/Basic_09.md
+  - 基础总结(十)-模块与包: python/Basic_10.md
+  - 基础总结(十一)-文件操作: python/Basic_11.md
+
+
+
 - Linux:
   - scp: Linux/scp.md
   - dd命令制作启动盘: Linux/dd.md
