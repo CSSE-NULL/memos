@@ -1,0 +1,1291 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+    
+    
+      
+        <title>基础总结(七)-面向对象 - my memos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="my memos" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              my memos
+            </span>
+            <span class="md-header-nav__topic">
+              
+                基础总结(七)-面向对象
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="my memos" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    my memos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/useguide/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_01/" title="基础总结(一)-基础知识" class="md-nav__link">
+      基础总结(一)-基础知识
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_02/" title="基础总结(二)-序列" class="md-nav__link">
+      基础总结(二)-序列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_03/" title="基础总结(三)-字符串" class="md-nav__link">
+      基础总结(三)-字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_04/" title="基础总结(四)-字典" class="md-nav__link">
+      基础总结(四)-字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_05/" title="基础总结(五)-基本语句" class="md-nav__link">
+      基础总结(五)-基本语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_06/" title="基础总结(六)-函数" class="md-nav__link">
+      基础总结(六)-函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        基础总结(七)-面向对象
+      </label>
+    
+    <a href="./" title="基础总结(七)-面向对象" class="md-nav__link md-nav__link--active">
+      基础总结(七)-面向对象
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    面向对象的三大法宝
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    多态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    继承
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    类
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    属性、函数和方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    再谈隐藏
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    类的命名空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    指定超类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    多个超类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    抽象基类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_08/" title="基础总结(八)-异常处理" class="md-nav__link">
+      基础总结(八)-异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_09/" title="基础总结(九)-魔法方法" class="md-nav__link">
+      基础总结(九)-魔法方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_10/" title="基础总结(十)-模块与包" class="md-nav__link">
+      基础总结(十)-模块与包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_11/" title="基础总结(十一)-文件操作" class="md-nav__link">
+      基础总结(十一)-文件操作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/scp/" title="scp" class="md-nav__link">
+      scp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/dd/" title="dd命令制作启动盘" class="md-nav__link">
+      dd命令制作启动盘
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Latex
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Latex
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Latex/error/" title="错误总结" class="md-nav__link">
+      错误总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/commands/" title="常见命令" class="md-nav__link">
+      常见命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/proxy/" title="开启ss代理加速" class="md-nav__link">
+      开启ss代理加速
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      C++
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../C++/" title="学习路线" class="md-nav__link">
+      学习路线
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ftp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ftp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ftp/" title="安装与使用" class="md-nav__link">
+      安装与使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      ss
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        ss
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ss/ubuntu_ss/" title="ubuntu上使用shaodwsocks-qt5" class="md-nav__link">
+      ubuntu上使用shaodwsocks-qt5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      工具使用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        工具使用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/zotero/" title="文献资料管理-zotero" class="md-nav__link">
+      文献资料管理-zotero
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      misc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        misc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/cmd_proxy/" title="Windows命令行代理" class="md-nav__link">
+      Windows命令行代理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/tricks/" title="Chrome实用技巧" class="md-nav__link">
+      Chrome实用技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/origin_src/" title="源码安装" class="md-nav__link">
+      源码安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    面向对象的三大法宝
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    多态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    继承
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    类
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    属性、函数和方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    再谈隐藏
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    类的命名空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    指定超类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    多个超类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    抽象基类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">再谈抽象</h1>
+<h2 id="_2">面向对象的三大法宝</h2>
+<h3 id="_3">多态</h3>
+<p>当我们编写一个获取商品价格的函数时，由于无法确定现实中输入的价格表示形式是怎么样（比如可能是元组，字典，列表），那么你可能需要写多次判断来解决这个问题，同时无法对未知情况进行提前预估。我们需要的是一个方法，它可以直接获取对象的价格，而不管其类型如何，这种不关心对象如何实现的编程方式，就是多态。可以看看以下几个例子：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="s1">&#39;hello world&#39;</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span> <span class="c1"># choice随机选择一个元素输出</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span> <span class="c1"># count方法实现了多态，可以对各种序列和映射进行计数而不关心其类型</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="s1">&#39;hello world&#39;</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">len_msg</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;The length of&quot;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="c1"># repr,len也实现了多态，可以显示不同类型元素的处理</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">len_msg</span><span class="p">(</span><span class="s1">&#39;ssldl&#39;</span><span class="p">)</span>
+<span class="n">The</span> <span class="n">length</span> <span class="n">of</span> <span class="s1">&#39;ssldl&#39;</span> <span class="ow">is</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">len_msg</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">The</span> <span class="n">length</span> <span class="n">of</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="ow">is</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">len_msg</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
+<span class="n">The</span> <span class="n">length</span> <span class="n">of</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span> <span class="ow">is</span> <span class="mi">2</span>
+</pre></div>
+
+
+<h3 id="_4">封装</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">o</span> <span class="o">=</span> <span class="n">OpenObject</span><span class="p">()</span> <span class="c1"># 这是一个未封装类，对象可以修改和获取全局变量</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">o</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;Sir Lancelot&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">o</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+<span class="s1">&#39;Sir Lancelot&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">global_name</span> <span class="c1"># 全局变量</span>
+<span class="s1">&#39;Sir Lancelot&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">global_name</span> <span class="o">=</span> <span class="s1">&#39;Sir Gumby&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">o</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span> <span class="c1"># 修改全局变量会影响对象的状态，这种方式不是我们想要的，我们需要对象独立</span>
+<span class="s1">&#39;Sir Gumby</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">o1</span> <span class="o">=</span> <span class="n">OpenObject</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">o2</span> <span class="o">=</span> <span class="n">OpenObject</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">o1</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;Robin Hood&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">o2</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span> <span class="c1"># 这里设置第一个对象，同时还影响了第二个对象</span>
+<span class="s1">&#39;Robin Hood&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">ClosedObject</span><span class="p">()</span> <span class="c1"># 这是一个封装好的类型</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;Sir Lancelot&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+<span class="s1">&#39;Sir Lancelot</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">ClosedObject</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;Sir Robin&#39;</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+<span class="s1">&#39;Sir Robin&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span> <span class="c1"># 对象c未受影响，各对象独立操作name，这种封装起来的名称叫做属性，属性是归属于对象的变量，对象由封装起来的属性和方法构成</span>
+<span class="s1">&#39;Sir Lancelot&#39;</span>
+</pre></div>
+
+
+<h3 id="_5">继承</h3>
+<p>当我们拥有一个基础类，同时需要写一个新的类，这个类只在原来的基础上做出一些个性化改动，此时就可以使用到继承。比如你有个Shape类，可以计算面积，并画出图形。你想实现一个Rectangle类，它计算面积的方法需要个性化修改，但是draw方法可以直接使用Shape类的，这就可以直接对Shape类进行继承。</p>
+<h2 id="_6">类</h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">):</span>
+<span class="o">...</span>             <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello,world! I&#39;m {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;steve jobs&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bar</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;bill gates&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span>
+<span class="n">Hello</span><span class="p">,</span><span class="n">world</span><span class="err">!</span> <span class="n">I</span><span class="s1">&#39;m steve jobs.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bar</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span>
+<span class="n">Hello</span><span class="p">,</span><span class="n">world</span><span class="err">!</span> <span class="n">I</span><span class="s1">&#39;m bill gates.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">name</span> <span class="c1"># 可以直接获取并修改</span>
+<span class="s1">&#39;steve jobs&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bar</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Ian Goodfellow&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bar</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span>
+<span class="n">Hello</span><span class="p">,</span><span class="n">world</span><span class="err">!</span> <span class="n">I</span><span class="s1">&#39;m Ian Goodfellow.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Person</span><span class="o">.</span><span class="n">greet</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span> <span class="c1"># foo.greet()相当于将foo传入到类的第一个参数，与这一句等价</span>
+<span class="n">Hello</span><span class="p">,</span><span class="n">world</span><span class="err">!</span> <span class="n">I</span><span class="s1">&#39;m steve jobs.</span>
+</pre></div>
+
+
+<h3 id="_7">属性、函数和方法</h3>
+<p>函数与方法的区别是：方法关联对象，函数不会。</p>
+<h3 id="_8">再谈隐藏</h3>
+<p>前面提到的例子里，name属性可以在外部被修改，这样是不安全的。比如，当你执行set_name不仅修改了名字，同时会向管理员发邮件，但是如果直接进行姓名修改，则不会触发这样的操作。为了防止这种情况，Python提供了一种君子协定，在属性或方法前加上<code>__</code>就可以让外部无法进行直接访问。比如下面的例子：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Sec</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="s2">&quot;steve&quot;</span> <span class="c1"># 这里的name声明为私有变量</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">__greet_sec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># 私有方法</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello,{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__name</span><span class="p">))</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="bp">self</span><span class="o">.</span><span class="n">__greet_sec</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">Sec</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">__name</span> <span class="c1"># 无法直接访问</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;Sec&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;__name&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">_Sec__name</span> <span class="c1"># 其实Python只是将其换了个名字</span>
+<span class="s1">&#39;steve&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">__greet_sec</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;Sec&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;__greet_sec&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">_Sec__greet_sec</span>
+<span class="o">&lt;</span><span class="n">bound</span> <span class="n">method</span> <span class="n">Sec</span><span class="o">.</span><span class="n">__greet_sec</span> <span class="n">of</span> <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Sec</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000025F51C0C7B8</span><span class="o">&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span> <span class="c1"># 可以通过对外开放的接口调用</span>
+<span class="n">hello</span><span class="p">,</span><span class="n">steve</span>
+</pre></div>
+
+
+<p>我们还可以声明一个下划线打头的属性和方法，这种外部可以调用，但是不推荐这样做，用import * 的时候也不会被导入。</p>
+<h3 id="_9">类的命名空间</h3>
+<p>其实类的定义就是执行声明下的所有代码，这些代码作用在一个特定的命名空间，也就是类的命名空间：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Test</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;class Test is defined...&quot;</span><span class="p">)</span> <span class="c1"># 类的定义只是执行了内部的代码而已，并不需要一定有def等函数定义。</span>
+<span class="o">...</span>
+<span class="k">class</span> <span class="nc">Test</span> <span class="ow">is</span> <span class="n">defined</span><span class="o">...</span>
+</pre></div>
+
+
+<p>而对于类的命名空间中全局变量与局部变量的关系如下：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Counter</span><span class="p">:</span>
+<span class="o">...</span>     <span class="n">member</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="n">Counter</span><span class="o">.</span><span class="n">member</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># 对全局变量进行更改</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m1</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="o">.</span><span class="n">member</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m2</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m2</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="o">.</span><span class="n">member</span> <span class="c1"># 仍然作用在全局变量上</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m1</span><span class="o">.</span><span class="n">member</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span> <span class="c1"># 作用于局部变量</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m1</span><span class="o">.</span><span class="n">member</span>
+<span class="s1">&#39;two&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m2</span><span class="o">.</span><span class="n">member</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="o">.</span><span class="n">member</span>
+<span class="mi">2</span>
+</pre></div>
+
+
+<h3 id="_10">指定超类</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Filter</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="bp">self</span><span class="o">.</span><span class="n">blocked</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequence</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocked</span><span class="p">]</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">SPAMFilter</span><span class="p">(</span><span class="n">Filter</span><span class="p">):</span> <span class="c1">#用圆括号括起来表示继承超类</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># 对init进行改写</span>
+<span class="o">...</span>             <span class="bp">self</span><span class="o">.</span><span class="n">blocked</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SPAM&#39;</span><span class="p">]</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">Filter</span><span class="p">()</span> <span class="c1"># 可以重写为任何过滤器</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="o">.</span><span class="n">filter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="n">SPAMFilter</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>  <span class="c1"># 此处经过重写，使得该类成为特定用途的过滤器</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">filter</span><span class="p">([</span><span class="s1">&#39;SPAM&#39;</span><span class="p">,</span><span class="s1">&#39;SPAM&#39;</span><span class="p">,</span> <span class="s1">&#39;SPAM&#39;</span><span class="p">,</span> <span class="s1">&#39;SPAM&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;SPAM&#39;</span><span class="p">])</span> <span class="c1"># 直接使用超类的filter函数，不用再次编写</span>
+<span class="p">[</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">]</span>
+</pre></div>
+
+
+<p>可以通过如下方式判断继承关系：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">SPAMFilter</span><span class="p">,</span> <span class="n">Filter</span><span class="p">)</span> <span class="c1"># 检测A是否是B的子类</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">Filter</span><span class="p">,</span> <span class="n">SPAMFilter</span><span class="p">)</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">SPAMFilter</span><span class="o">.</span><span class="vm">__bases__</span> <span class="c1"># 返回类的超类</span>
+<span class="p">(</span><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Filter</span><span class="s1">&#39;&gt;,)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Filter</span><span class="o">.</span><span class="vm">__bases__</span>
+<span class="p">(</span><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">object</span><span class="s1">&#39;&gt;,)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="n">SPAMFilter</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">SPAMFilter</span><span class="p">)</span> <span class="c1"># 判断a是否是B类的实例</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">Filter</span><span class="p">)</span> <span class="c1"># s既是SPAMFilter的实例，也是其超类的实例。</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="nb">list</span><span class="p">)</span> <span class="c1"># 该函数也可以用于判断类型</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="vm">__class__</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">SPAMFilter</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">SPAMFilter</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+
+
+<h3 id="_11">多个超类</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">exp</span><span class="p">):</span>
+<span class="o">...</span>             <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Talker</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hi,my value is&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">TalkCalc</span><span class="p">(</span><span class="n">Calculator</span><span class="p">,</span><span class="n">Talker</span><span class="p">):</span> <span class="c1"># 这里继承了两个超类，虽然类里面没有任何代码，但是具有两个超类的功能</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tc</span> <span class="o">=</span> <span class="n">TalkCalc</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tc</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="s1">&#39;1+2*3&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tc</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+<span class="n">Hi</span><span class="p">,</span><span class="n">my</span> <span class="n">value</span> <span class="ow">is</span> <span class="mi">7</span>
+</pre></div>
+
+
+<p>当有多个超类的时候，顺序就很重要了，后面的超类如果与前面的重名，就会被覆盖掉。一般不建议写很多超类。</p>
+<h3 id="_12">接口</h3>
+<p>Python不会显示定义接口，但是可以判断对象是否具有某些方法，这些接口针对的就是多态。总体如下：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span> <span class="s1">&#39;talk&#39;</span><span class="p">)</span> <span class="c1"># 判断是否具有某个属性或方法</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span><span class="s1">&#39;fnord&#39;</span><span class="p">)</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span><span class="s1">&#39;talk&#39;</span><span class="p">,</span><span class="bp">None</span><span class="p">))</span> <span class="c1"># 获取属性，如果没有则返回None</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span><span class="s1">&#39;fnord&#39;</span><span class="p">,</span><span class="bp">None</span><span class="p">))</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">setattr</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">)</span> <span class="c1"># 添加属性</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tc</span><span class="o">.</span><span class="n">name</span>
+<span class="s1">&#39;Steve&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tc</span><span class="o">.</span><span class="vm">__dict__</span> <span class="c1"># 查看对象存储的属性</span>
+<span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Steve&#39;</span><span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_13">抽象基类</h3>
+<p>多态实现了只要提供特定功能接口，就能对任意对象执行相应的操作，不需要知道对象属于哪一类。封装可以让你不需要知道对象的内部构造，就可以对这个对象进行操作。而继承使得代码能够重复利用。前面提到，如果我们想要知道一个对象是否具有我们想要的功能（比如空调能否制热，制冷，加湿等），需要一个个去检测。有没有一种自动操作的方式呢？这个就需要利用抽象基类了。这就好比如果空调上的按钮没有任何说明，没有任何标记，那么你就只能一个个试，看看有没有相应的效果。但是如果所有功能都一个个标注在上面了，你就只需要看一眼就知道有哪些功能了。一般而言，抽象类不应该实例化，而只是定义一组方法（只需要在各个功能按钮下写上功能名称，而不用单独用新的按钮按下去再显示）。Python提供了abc模块，以下就是其使用方法：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span><span class="n">abstractmethod</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Talker</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="o">...</span>     <span class="nd">@abstractmethod</span> <span class="c1"># 修饰器，用于声明抽象方法</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Talker</span><span class="p">()</span> <span class="c1"># 抽象类不能实例化</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">Can</span><span class="s1">&#39;t instantiate abstract class Talker with abstract methods talk</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Knigget</span><span class="p">(</span><span class="n">Talker</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">pass</span> <span class="c1"># 没有重写抽象方法，因此也是抽象类，不能实例化</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Knigget</span><span class="p">()</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">Can</span><span class="s1">&#39;t instantiate abstract class Knigget with abstract methods talk</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Knigget</span><span class="p">(</span><span class="n">Talker</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Ni&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">k</span> <span class="o">=</span> <span class="n">Knigget</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">k</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+<span class="n">Ni</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">Talker</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Herring</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Blub.&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="n">Herring</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">Talker</span><span class="p">)</span> <span class="c1"># h并没有继承Talker</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Talker</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Herring</span><span class="p">)</span> <span class="c1"># 通过register可以使任何Herring类同时都是Talker类，这在当Herring是从其他模块导入，你不能将其从基类派生时很有用。</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Herring</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">Talker</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">Herring</span><span class="p">,</span><span class="n">Talker</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Clam</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">pass</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Talker</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Clam</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">__main__</span><span class="o">.</span><span class="n">Clam</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Clam</span><span class="p">()</span> <span class="c1"># register的弊端就是，丧失了类的继承机制。只是希望Clam有talk功能，但是事实上它没有</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;Clam&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;talk&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">Talker</span><span class="p">)</span> <span class="c1"># c仍然是Talker的实例，这是通过register实现的</span>
+<span class="bp">True</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Basic_06/" title="基础总结(六)-函数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                基础总结(六)-函数
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Basic_08/" title="基础总结(八)-异常处理" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                基础总结(八)-异常处理
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

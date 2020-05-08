@@ -1,0 +1,1311 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+    
+    
+      
+        <title>基础总结(六)-函数 - my memos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="my memos" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              my memos
+            </span>
+            <span class="md-header-nav__topic">
+              
+                基础总结(六)-函数
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="my memos" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    my memos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/useguide/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_01/" title="基础总结(一)-基础知识" class="md-nav__link">
+      基础总结(一)-基础知识
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_02/" title="基础总结(二)-序列" class="md-nav__link">
+      基础总结(二)-序列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_03/" title="基础总结(三)-字符串" class="md-nav__link">
+      基础总结(三)-字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_04/" title="基础总结(四)-字典" class="md-nav__link">
+      基础总结(四)-字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_05/" title="基础总结(五)-基本语句" class="md-nav__link">
+      基础总结(五)-基本语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        基础总结(六)-函数
+      </label>
+    
+    <a href="./" title="基础总结(六)-函数" class="md-nav__link md-nav__link--active">
+      基础总结(六)-函数
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#callable" class="md-nav__link">
+    callable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    函数文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    修改参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    位置参数和关键字参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    收集参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    分配参数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    作用域
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    闭包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    递归
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    阶乘和幂
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    阶乘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    幂
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapfilterreduce" class="md-nav__link">
+    函数式编程：map,filter,reduce
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_07/" title="基础总结(七)-面向对象" class="md-nav__link">
+      基础总结(七)-面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_08/" title="基础总结(八)-异常处理" class="md-nav__link">
+      基础总结(八)-异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_09/" title="基础总结(九)-魔法方法" class="md-nav__link">
+      基础总结(九)-魔法方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_10/" title="基础总结(十)-模块与包" class="md-nav__link">
+      基础总结(十)-模块与包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_11/" title="基础总结(十一)-文件操作" class="md-nav__link">
+      基础总结(十一)-文件操作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/scp/" title="scp" class="md-nav__link">
+      scp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/dd/" title="dd命令制作启动盘" class="md-nav__link">
+      dd命令制作启动盘
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Latex
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Latex
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Latex/error/" title="错误总结" class="md-nav__link">
+      错误总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/commands/" title="常见命令" class="md-nav__link">
+      常见命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/proxy/" title="开启ss代理加速" class="md-nav__link">
+      开启ss代理加速
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      C++
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../C++/" title="学习路线" class="md-nav__link">
+      学习路线
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ftp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ftp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ftp/" title="安装与使用" class="md-nav__link">
+      安装与使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      ss
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        ss
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ss/ubuntu_ss/" title="ubuntu上使用shaodwsocks-qt5" class="md-nav__link">
+      ubuntu上使用shaodwsocks-qt5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      工具使用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        工具使用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/zotero/" title="文献资料管理-zotero" class="md-nav__link">
+      文献资料管理-zotero
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      misc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        misc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/cmd_proxy/" title="Windows命令行代理" class="md-nav__link">
+      Windows命令行代理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/tricks/" title="Chrome实用技巧" class="md-nav__link">
+      Chrome实用技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/origin_src/" title="源码安装" class="md-nav__link">
+      源码安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#callable" class="md-nav__link">
+    callable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    函数文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    修改参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    位置参数和关键字参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    收集参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    分配参数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    作用域
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    闭包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    递归
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    阶乘和幂
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    阶乘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    幂
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapfilterreduce" class="md-nav__link">
+    函数式编程：map,filter,reduce
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">抽象</h1>
+<h2 id="callable">callable</h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span><span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">len</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">callable</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 判断x是否可调用</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">callable</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="bp">True</span>
+</pre></div>
+
+
+<h2 id="_2">函数文档</h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="o">...</span>     <span class="s1">&#39;计算x的平方值&#39;</span> <span class="c1"># 这种放在函数第一行的字符串称作文档字符串</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">square</span><span class="o">.</span><span class="vm">__doc__</span> <span class="c1"># 返回函数文档</span>
+<span class="s1">&#39;计算x的平方值&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">square</span><span class="p">)</span> <span class="c1"># 返回函数的详细信息，包括函数文档</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
+
+<span class="n">square</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="err">计算</span><span class="n">x的平方值</span>
+</pre></div>
+
+
+<h2 id="_3">参数</h2>
+<h3 id="_4">修改参数</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">change</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">change</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="c1"># 并不会改变外部值</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">change</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="o">...</span>     <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">change</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 对于数组进行局部修改是可行的</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">change</span><span class="p">(</span><span class="n">x</span><span class="p">[:])</span> <span class="c1"># 传入x的副本，此时内部只修改副本，不影响内部</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">inc</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># 如果必需要改变参数，可以直接返回改变后的值，或者直接传入数组</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">inc</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">1</span>
+</pre></div>
+
+
+<h3 id="_5">位置参数和关键字参数</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">greeting</span><span class="o">=</span><span class="s2">&quot;hi&quot;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;arnold&#39;</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}, {}!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">greeting</span><span class="p">,</span><span class="n">name</span><span class="p">))</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hello</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span><span class="s1">&#39;bob&#39;</span><span class="p">)</span> <span class="c1"># 通过位置来传递参数</span>
+<span class="n">hello</span><span class="p">,</span> <span class="n">bob</span><span class="err">!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hello</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;alice&#39;</span><span class="p">)</span> <span class="c1"># 混合使用位置和关键字参数，位置参数必须在前面，否则函数无法确定参数</span>
+<span class="n">hello</span><span class="p">,</span> <span class="n">alice</span><span class="err">!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;alice&#39;</span><span class="p">)</span> <span class="c1"># 对于有默认值的参数，可以直接省略</span>
+<span class="n">hi</span><span class="p">,</span> <span class="n">alice</span><span class="err">!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hello</span><span class="p">()</span>
+<span class="n">hi</span><span class="p">,</span> <span class="n">arnold</span><span class="err">!</span>
+</pre></div>
+
+
+<h3 id="_6">收集参数</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">print_params</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="o">*</span><span class="n">r1</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="o">**</span><span class="n">r2</span><span class="p">):</span> <span class="c1"># *r1用于收集位置参数，在其后面的参数必须是关键字参数，因此d必须用关键字赋值，而**r2收集所有剩余关键字参数</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">print_params</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="mi">19</span><span class="p">,</span><span class="n">foo</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">bar</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">sth</span><span class="o">=</span><span class="s2">&quot;hh&quot;</span><span class="p">)</span> 
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="mi">19</span>
+<span class="p">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;sth&#39;</span><span class="p">:</span> <span class="s1">&#39;hh&#39;</span><span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_7">分配参数</h3>
+<p>当我们有多个参数需要传递值的时候，可以传入一个序列或者字典，然后用前面提到的<em>和</em>*进行反向操作，将不同的值分配到不同的参数中。但是，如果函数本身使用了收集参数，那么就没必要使用分配参数了，这样可能比直接传入序列和字典更加麻烦。</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">with_stars</span><span class="p">(</span><span class="o">**</span><span class="n">kwd</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">kwd</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="n">kwd</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span><span class="s1">&#39;years old.&#39;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">without_stars</span><span class="p">(</span><span class="n">kwd</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">kwd</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="n">kwd</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span><span class="s1">&#39;years old.&#39;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;bob&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">with_stars</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="p">)</span> <span class="c1"># 将字典解包分配到两个参数中，然后再放入形参中</span>
+<span class="n">bob</span> <span class="ow">is</span> <span class="mi">12</span> <span class="n">years</span> <span class="n">old</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">without_stars</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="c1"># 直接传字典进入函数</span>
+<span class="n">bob</span> <span class="ow">is</span> <span class="mi">12</span> <span class="n">years</span> <span class="n">old</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="c1"># 解包并分配参数到a,b</span>
+<span class="mi">5</span>
+</pre></div>
+
+
+<h2 id="_8">作用域</h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">scope</span> <span class="o">=</span> <span class="nb">vars</span><span class="p">()</span> <span class="c1"># 返回全局变量定义域字典</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">scope</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">scope</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span><span class="o">+=</span><span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="c1"># 最好不要直接操作作用域的值</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">():</span> <span class="n">x</span><span class="o">=</span><span class="mi">42</span>  <span class="c1"># 创建了局部变量x，此时属于另一个作用域</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="p">()</span> <span class="c1"># 并不会改变全局变量x</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="n">parameter</span><span class="p">):</span> <span class="k">print</span><span class="p">(</span><span class="n">parameter</span> <span class="o">+</span> <span class="n">external</span><span class="p">)</span> <span class="c1"># 局部作用域可以访问到全局作用域</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">external</span> <span class="o">=</span> <span class="s1">&#39;berry&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">combine</span><span class="p">(</span><span class="s2">&quot;hi &quot;</span><span class="p">)</span>
+<span class="n">hi</span> <span class="n">berry</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="n">parameter</span><span class="p">):</span> <span class="k">print</span><span class="p">(</span><span class="n">parameter</span> <span class="o">+</span> <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;parameter&#39;</span><span class="p">])</span> <span class="c1"># 如果局部变量名与全局变量名冲突，可以通过globals()获取全局作用域字典，然后取出对应的值。（相对应的局部作用域字典为locals()）</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">parameter</span> <span class="o">=</span> <span class="s2">&quot;berry&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">combine</span><span class="p">(</span><span class="s2">&quot;Straw&quot;</span><span class="p">)</span>
+<span class="n">Strawberry</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">inc</span><span class="p">():</span>
+<span class="o">...</span>     <span class="k">global</span> <span class="n">x</span> <span class="c1"># 如果想修改外部变量或者获取外部变量，可直接声明为global</span>
+<span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">inc</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="mi">2</span>
+</pre></div>
+
+
+<h3 id="_9">闭包</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">factor</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">multiplyByFactor</span><span class="p">(</span><span class="n">number</span><span class="p">):</span> <span class="c1"># 该函数携带着外部函数的作用域，称之为闭包</span>
+<span class="o">...</span>             <span class="k">return</span> <span class="n">number</span><span class="o">*</span><span class="n">factor</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">multiplyByFactor</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double</span> <span class="o">=</span> <span class="n">multiplier</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">triple</span> <span class="o">=</span> <span class="n">multiplier</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">triple</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">factor</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="nb">locals</span><span class="p">())</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">multiplyByFactor</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="nb">locals</span><span class="p">())</span>
+<span class="o">...</span>             <span class="k">return</span> <span class="n">number</span><span class="o">*</span><span class="n">factor</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">multiplyByFactor</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double</span> <span class="o">=</span> <span class="n">multiplier</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">1</span> <span class="p">{</span><span class="s1">&#39;factor&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">2</span> <span class="p">{</span><span class="s1">&#39;number&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;factor&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># 可访问外层函数的作用域，从而获得更加动态的函数特性</span>
+<span class="mi">2</span> <span class="p">{</span><span class="s1">&#39;number&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;factor&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="mi">20</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">factor</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="nb">locals</span><span class="p">())</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">multiplyByFactor</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<span class="o">...</span>             <span class="n">nonlocal</span> <span class="n">factor</span> <span class="c1"># 定义外部变量nonlocal</span>
+<span class="o">...</span>             <span class="n">factor</span> <span class="o">+=</span> <span class="mi">3</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="nb">locals</span><span class="p">())</span>
+<span class="o">...</span>             <span class="k">return</span> <span class="n">number</span><span class="o">*</span><span class="n">factor</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">multiplyByFactor</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="n">multiplier</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">1</span> <span class="p">{</span><span class="s1">&#39;factor&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">test</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 这里外部变量被修改</span>
+<span class="mi">2</span> <span class="p">{</span><span class="s1">&#39;number&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;factor&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="mi">6</span>
+</pre></div>
+
+
+<h2 id="_10">递归</h2>
+<p>递归函数通常包括两个部分：</p>
+<ul>
+<li>
+<p>基线条件（针对最小的问题）：满足这种条件时函数将直接返回一个值。</p>
+</li>
+<li>
+<p>递归条件：包含一个或多个调用，这些调用旨在解决问题的一部分。</p>
+</li>
+</ul>
+<h3 id="_11">阶乘和幂</h3>
+<h4 id="_12">阶乘</h4>
+<blockquote>
+<p>定义：
+1的阶乘为1
+对于n&gt;1, n的阶乘等于(n-1)的阶乘乘以n</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span> <span class="k">return</span> <span class="mi">1</span>
+<span class="o">...</span>     <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">24</span>
+</pre></div>
+
+
+<h4 id="_13">幂</h4>
+<blockquote>
+<p>定义：
+x的0次幂为1
+n&gt;0, pow(x,n)为pow(x,n-1)*x</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
+<span class="o">...</span>     <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="mi">8</span>
+</pre></div>
+
+
+<p>递归强在易读性，但是性能比不上循环。每一次返回自身，都是定义不同版本（不同作用域）的同一个函数，就像是两个同类的动物在交流。</p>
+<h2 id="mapfilterreduce">函数式编程：map,filter,reduce</h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="n">data</span><span class="p">))</span> <span class="c1"># Python3中map,filter返回的是可迭代的对象。map用于将函数作用于序列</span>
+<span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">,</span><span class="n">data</span><span class="p">))</span> <span class="c1"># filter用于筛出符合条件的数据</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span> <span class="c1"># 由于reduce用处不大且不易理解，龟叔把它从python3的内建函数中移除了，想用的话需要从functools里引用</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="c1"># reduce用于累计作用函数于整个序列</span>
+<span class="mi">15</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+<span class="mi">15</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Basic_05/" title="基础总结(五)-基本语句" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                基础总结(五)-基本语句
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Basic_07/" title="基础总结(七)-面向对象" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                基础总结(七)-面向对象
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1281 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+    
+    
+      
+        <title>基础总结(八)-异常处理 - my memos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="my memos" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              my memos
+            </span>
+            <span class="md-header-nav__topic">
+              
+                基础总结(八)-异常处理
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="my memos" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    my memos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/useguide/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_01/" title="基础总结(一)-基础知识" class="md-nav__link">
+      基础总结(一)-基础知识
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_02/" title="基础总结(二)-序列" class="md-nav__link">
+      基础总结(二)-序列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_03/" title="基础总结(三)-字符串" class="md-nav__link">
+      基础总结(三)-字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_04/" title="基础总结(四)-字典" class="md-nav__link">
+      基础总结(四)-字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_05/" title="基础总结(五)-基本语句" class="md-nav__link">
+      基础总结(五)-基本语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_06/" title="基础总结(六)-函数" class="md-nav__link">
+      基础总结(六)-函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_07/" title="基础总结(七)-面向对象" class="md-nav__link">
+      基础总结(七)-面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        基础总结(八)-异常处理
+      </label>
+    
+    <a href="./" title="基础总结(八)-异常处理" class="md-nav__link md-nav__link--active">
+      基础总结(八)-异常处理
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    指定异常
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raise" class="md-nav__link">
+    raise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    自定义异常类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    捕获异常
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raise_1" class="md-nav__link">
+    无参raise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    多个异常处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    捕获对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    一网打尽
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elsefinally" class="md-nav__link">
+    else,finally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    异常之禅
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    警告
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_09/" title="基础总结(九)-魔法方法" class="md-nav__link">
+      基础总结(九)-魔法方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_10/" title="基础总结(十)-模块与包" class="md-nav__link">
+      基础总结(十)-模块与包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Basic_11/" title="基础总结(十一)-文件操作" class="md-nav__link">
+      基础总结(十一)-文件操作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/scp/" title="scp" class="md-nav__link">
+      scp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/dd/" title="dd命令制作启动盘" class="md-nav__link">
+      dd命令制作启动盘
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Latex
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Latex
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Latex/error/" title="错误总结" class="md-nav__link">
+      错误总结
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/commands/" title="常见命令" class="md-nav__link">
+      常见命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/proxy/" title="开启ss代理加速" class="md-nav__link">
+      开启ss代理加速
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      C++
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../C++/" title="学习路线" class="md-nav__link">
+      学习路线
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      ftp
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        ftp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ftp/" title="安装与使用" class="md-nav__link">
+      安装与使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      ss
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        ss
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ss/ubuntu_ss/" title="ubuntu上使用shaodwsocks-qt5" class="md-nav__link">
+      ubuntu上使用shaodwsocks-qt5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      工具使用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        工具使用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/zotero/" title="文献资料管理-zotero" class="md-nav__link">
+      文献资料管理-zotero
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      misc
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        misc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/cmd_proxy/" title="Windows命令行代理" class="md-nav__link">
+      Windows命令行代理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/tricks/" title="Chrome实用技巧" class="md-nav__link">
+      Chrome实用技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/origin_src/" title="源码安装" class="md-nav__link">
+      源码安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    指定异常
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raise" class="md-nav__link">
+    raise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    自定义异常类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    捕获异常
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raise_1" class="md-nav__link">
+    无参raise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    多个异常处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    捕获对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    一网打尽
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elsefinally" class="md-nav__link">
+    else,finally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    异常之禅
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    警告
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">异常</h1>
+<p>异常就是某些类的实例，比如ZeroDivisionError。我们可以通过某些条件触发和捕获这些实例。</p>
+<h2 id="_2">指定异常</h2>
+<h3 id="raise">raise</h3>
+<p>可以通过raise主动抛出异常：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="ne">Exception</span>
+<span class="ne">Exception</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+<span class="ne">Exception</span><span class="p">:</span> <span class="n">test</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="ne">OSError</span>
+<span class="ne">OSError</span>
+</pre></div>
+
+
+<h3 id="_3">自定义异常类</h3>
+<p>我们有时候需要根据异常的类型进行不同的处理，这时候如果有我们自己定义的异常，最好自定义一个异常类，而不是直接用Exception输出信息。方式很简单，就是要直接或间接继承Exception类：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">MyError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span> <span class="k">pass</span>
+</pre></div>
+
+
+<h2 id="_4">捕获异常</h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter x: &quot;</span><span class="p">))</span>
+<span class="n">enter</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter y: &quot;</span><span class="p">))</span>
+<span class="n">enter</span> <span class="n">y</span><span class="p">:</span> <span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span>
+<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+
+<span class="c1"># 改写为以下内容捕获异常(try/except)：</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the first number: &#39;</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the second number: &#39;</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;The second number can&#39;t be zero!&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="raise_1">无参raise</h3>
+<p>捕获到一个异常后，你觉得无法处理，可以直接调用raise,不带任何参数，此时函数会将异常送到调用该函数的地方去处理。例如一个带异常消除的计算器：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">MuffledCalculator</span><span class="p">:</span>
+<span class="o">...</span>     <span class="n">muffled</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="o">...</span>     <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">):</span>
+<span class="o">...</span>             <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>                     <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+<span class="o">...</span>             <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<span class="o">...</span>                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">muffled</span><span class="p">:</span>
+<span class="o">...</span>                             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Division by zero is illegal&#39;</span><span class="p">)</span>
+<span class="o">...</span>                     <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>                             <span class="k">raise</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">MuffledCalculator</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="s1">&#39;10/2&#39;</span><span class="p">)</span>
+<span class="mf">5.0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="s1">&#39;10/0&#39;</span><span class="p">)</span>
+<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">MuffledCalculator</span><span class="o">.</span><span class="n">muffled</span> <span class="o">=</span> <span class="bp">True</span> <span class="c1"># 启动隐藏异常功能</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="s1">&#39;10/0&#39;</span><span class="p">)</span>
+<span class="n">Division</span> <span class="n">by</span> <span class="n">zero</span> <span class="ow">is</span> <span class="n">illegal</span>
+</pre></div>
+
+
+<p>如果你不是想返回当前异常而是返回另外一个异常，不要直接使用raise xxx(指代另一个异常)，这样的话原异常就会变成上下文出现在异常文本中，比较好的方式是使用rasie ... from ...语句来提供自己的上下文，或者直接from None 禁用上下文：</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+<span class="o">...</span> <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">raise</span> <span class="ne">ValueError</span>
+<span class="o">...</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+<span class="o">...</span> <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">raise</span> <span class="ne">ValueError</span> <span class="kn">from</span> <span class="bp">None</span>
+<span class="o">...</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span>
+</pre></div>
+
+
+<h3 id="_5">多个异常处理</h3>
+<div class="codehilite"><pre><span></span><span class="c1"># 多个except</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the first number: &#39;</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the second number: &#39;</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;The second number can&#39;t be zero!&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="c1"># 可以捕获·多个异常</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;That wasn&#39;t a number, was it?&quot;</span><span class="p">)</span>
+
+<span class="c1"># 用异常元组（一定要加括号，否则可能会出现你不希望的结果）</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the first number: &#39;</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the second number: &#39;</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">,</span> <span class="ne">NameError</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Your numbers were bogus ...&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="_6">捕获对象</h3>
+<div class="codehilite"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the first number: &#39;</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the second number: &#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span> <span class="c1"># 这里的e表示异常对象而不是异常类</span>
+<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="_7">一网打尽</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;input sth: &quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">except</span><span class="p">:</span> <span class="c1"># 直接对所有异常统一处理，这样做的弊端是，可能让系统忽略一些重要的异常比如KeyboardInterrupt(按下Ctrl+C终止)，sys.exit()产生的异常等。更好的办法是使用except Exception as e,因为上面提到的系统级别的异常都是继承自BaseException，这是Exception的超类。</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;whatever you input with eroor will show this&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="nb">input</span> <span class="n">sth</span><span class="p">:</span> <span class="n">whatever</span> <span class="n">you</span> <span class="nb">input</span> <span class="k">with</span> <span class="n">eroor</span> <span class="n">will</span> <span class="n">show</span> <span class="n">this</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># 以下是使用except Exception as e这种方式捕获异常对象</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;test: &quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;hha&#39;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">test</span><span class="p">:</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">KeyboardInterrupt</span>
+</pre></div>
+
+
+<h3 id="elsefinally">else,finally</h3>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>             <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the first number: &#39;</span><span class="p">))</span>
+<span class="o">...</span>             <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the second number: &#39;</span><span class="p">))</span>
+<span class="o">...</span>             <span class="n">value</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x/y is &#39;</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">except</span><span class="p">:</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Invalid input,PLease try again.&#39;</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">else</span><span class="p">:</span> <span class="c1"># 在没有异常发生时执行</span>
+<span class="o">...</span>             <span class="k">break</span>
+<span class="o">...</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">second</span> <span class="n">number</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Invalid</span> <span class="nb">input</span><span class="p">,</span><span class="n">PLease</span> <span class="k">try</span> <span class="n">again</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">second</span> <span class="n">number</span><span class="p">:</span> <span class="n">hah</span>
+<span class="n">Invalid</span> <span class="nb">input</span><span class="p">,</span><span class="n">PLease</span> <span class="k">try</span> <span class="n">again</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="mi">2</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">second</span> <span class="n">number</span><span class="p">:</span> <span class="n">sd</span>
+<span class="n">Invalid</span> <span class="nb">input</span><span class="p">,</span><span class="n">PLease</span> <span class="k">try</span> <span class="n">again</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="n">Invalid</span> <span class="nb">input</span><span class="p">,</span><span class="n">PLease</span> <span class="k">try</span> <span class="n">again</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="n">Invalid</span> <span class="nb">input</span><span class="p">,</span><span class="n">PLease</span> <span class="k">try</span> <span class="n">again</span><span class="o">.</span> <span class="c1"># 这里是按了Ctrl+C，但是因为except捕获了KeyboardInterrupt无法跳出</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">second</span> <span class="n">number</span><span class="p">:</span> <span class="mi">2</span> <span class="c1"># 只有输入正确形式才能退出</span>
+<span class="n">x</span><span class="o">/</span><span class="n">y</span> <span class="ow">is</span>  <span class="mf">0.5</span>
+
+<span class="c1"># 以下是改良版</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>             <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the first number: &#39;</span><span class="p">))</span>
+<span class="o">...</span>             <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the second number: &#39;</span><span class="p">))</span>
+<span class="o">...</span>             <span class="n">value</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x/y is &#39;</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span> <span class="c1"># 这里不会捕获Ctrl+C产生的异常，并且对象e可以用于打印，从而获取异常的详细信息</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Invalid input: &#39;</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Please try again&#39;</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>             <span class="k">break</span>
+<span class="o">...</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">second</span> <span class="n">number</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Invalid</span> <span class="nb">input</span><span class="p">:</span>  <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+<span class="n">Please</span> <span class="k">try</span> <span class="n">again</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">second</span> <span class="n">number</span><span class="p">:</span> <span class="n">hello</span>
+<span class="n">Invalid</span> <span class="nb">input</span><span class="p">:</span>  <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;hello&#39;</span>
+<span class="n">Please</span> <span class="k">try</span> <span class="n">again</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="n">qqqq</span>
+<span class="n">Invalid</span> <span class="nb">input</span><span class="p">:</span>  <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;qqqq&#39;</span>
+<span class="n">Please</span> <span class="k">try</span> <span class="n">again</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="n">hi</span>
+<span class="n">Invalid</span> <span class="nb">input</span><span class="p">:</span>  <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;hi&#39;</span>
+<span class="n">Please</span> <span class="k">try</span> <span class="n">again</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">first</span> <span class="n">number</span><span class="p">:</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">3</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">KeyboardInterrupt</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span> <span class="mi">0</span>
+<span class="o">...</span> <span class="k">finally</span><span class="p">:</span> <span class="c1"># finally下的语句是无论有无异常都会执行的</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Cleaning up ...&#39;</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">del</span> <span class="n">x</span>
+<span class="o">...</span>
+<span class="n">Cleaning</span> <span class="n">up</span> <span class="o">...</span>
+<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+
+<span class="c1"># 同时使用四种语句</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+<span class="o">...</span> <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Unknown variable&quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;That went well.&#39;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">finally</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cleaning up&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">Cleaning</span> <span class="n">up</span>
+<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>
+<span class="o">...</span> <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Unknown variable&quot;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;That went well.&#39;</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">finally</span><span class="p">:</span> <span class="c1"># 无异常也会执行</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cleaning up&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mf">1.0</span>
+<span class="n">That</span> <span class="n">went</span> <span class="n">well</span><span class="o">.</span>
+<span class="n">Cleaning</span> <span class="n">up</span>
+</pre></div>
+
+
+<h2 id="_8">异常之禅</h2>
+<p>异常包含的思想就是，先做，错了再处理，而不是先考虑周到再做。比如下面这个能根据有无职位这一项来打印个人信息的功能函数：</p>
+<div class="codehilite"><pre><span></span><span class="c1"># 使用条件语句</span>
+<span class="k">def</span> <span class="nf">describe_person</span><span class="p">(</span><span class="n">person</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Description of&#39;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Age:&#39;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="s1">&#39;occupation&#39;</span> <span class="ow">in</span> <span class="n">person</span><span class="p">:</span> <span class="c1"># 这里需要查找两次key</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Occupation:&#39;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">])</span>
+
+<span class="c1"># 使用异常</span>
+<span class="k">def</span> <span class="nf">describe_person</span><span class="p">(</span><span class="n">person</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Description of&#39;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Age:&#39;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Occupation:&#39;</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">])</span> <span class="c1"># 这里只用查找一次，而且不用关心存不存在这个键</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span> <span class="k">pass</span>
+</pre></div>
+
+
+<h2 id="_9">警告</h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">warn</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;not good&#39;</span><span class="p">)</span>
+<span class="n">__main__</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="ne">UserWarning</span><span class="p">:</span> <span class="ow">not</span> <span class="n">good</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;not good&#39;</span><span class="p">)</span> <span class="c1"># 同一个警告只显示一次</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">filterwarnings</span> <span class="c1"># 其他代码调用你的模块时，你可以用这个函数对警告进行限制</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1"># 直接忽略</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Are you ok?&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span> <span class="c1"># 变为异常抛出</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Are you ok?&#39;</span><span class="p">)</span>
+<span class="ne">UserWarning</span><span class="p">:</span> <span class="n">Are</span> <span class="n">you</span> <span class="n">ok</span><span class="err">?</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s2">&quot;r u ok?&quot;</span><span class="p">,</span><span class="n">MyWarning</span><span class="p">)</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;MyWarning&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s2">&quot;r u ok?&quot;</span><span class="p">,</span><span class="ne">DeprecationWarning</span><span class="p">)</span> <span class="c1"># 自定义警告类型</span>
+<span class="ne">DeprecationWarning</span><span class="p">:</span> <span class="n">r</span> <span class="n">u</span> <span class="n">ok</span><span class="err">?</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span><span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span> <span class="c1"># 按类型忽略</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;sth else&#39;</span><span class="p">)</span>
+<span class="ne">UserWarning</span><span class="p">:</span> <span class="n">sth</span> <span class="k">else</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Basic_07/" title="基础总结(七)-面向对象" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                基础总结(七)-面向对象
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Basic_09/" title="基础总结(九)-魔法方法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                基础总结(九)-魔法方法
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
